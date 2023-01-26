@@ -15,5 +15,3 @@ spec:
       containers:
       - name: site
         image: galladas/kube-news:v1
-        ports:
-        - containerPort: 8080
