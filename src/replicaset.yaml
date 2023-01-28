@@ -1,9 +1,9 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
-  name: meuprimeirodeploy
+  name: meureplicaset
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: web
@@ -15,3 +15,5 @@ spec:
       containers:
       - name: site
         image: galladas/kube-news:v1
+        ports:
+        - containerPort: 80
